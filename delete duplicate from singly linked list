@@ -1,0 +1,19 @@
+public void removeDuplicate(){
+
+if(size==0 || size==1)  //base case  or (head==null || head.next==null)
+	return;
+
+Node curr=head,forward=head.next,previous=null;
+
+while(forward!=null) {
+
+if(forward.data == curr.data) {
+  curr.next=forward.next;
+  forward=forward.next;  }
+
+else {
+   curr=forward;
+   forward=forward.next; }
+}
+return;
+}
