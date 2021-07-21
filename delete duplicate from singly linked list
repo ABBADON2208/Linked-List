@@ -3,7 +3,7 @@ public void removeDuplicate(){
 if(size==0 || size==1)  //base case  or (head==null || head.next==null)
 	return;
 
-Node curr=head,forward=head.next,previous=null;
+Node curr=head,forward=head.next;
 
 while(forward!=null) {
 
