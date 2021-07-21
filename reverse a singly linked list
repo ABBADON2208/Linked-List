@@ -1,0 +1,25 @@
+// here we are just giving tghe reverse function as how to make a linked list in already given
+
+
+public void reverseLinkedList(){
+
+if(size==0 || size==1)            //base case
+	return;
+
+Node curr=head,forward=null,previous=null;
+
+while(curr.next!=null) {
+forward=curr.next;
+curr.next=previous;
+previous=curr;
+curr=forward;
+}
+
+head=curr;                //give the new head
+head.next=previous;
+return;
+}
+
+
+
+// this reverse just reverse the pointer not the data
