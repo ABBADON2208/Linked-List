@@ -1,0 +1,26 @@
+//  when out of two first element is to be peek for the middle
+
+
+
+
+public void findMid() {
+
+if(head==null || head.next==null || head.next.next==null)
+	return head;
+
+Node slow_Pointer=head,fast_Pointer=head;
+
+while(fast_Pointer.next!=null && fast_Pointer.next.next!=null) {
+slow_Pointer=slow_Pointer.next;
+fast_Pointer=fast_Pointer.next.next;
+}
+
+head=slow_Pointer;
+return head;
+}
+
+
+
+
+
+
